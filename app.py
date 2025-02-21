@@ -4,9 +4,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/bfhl', methods=['GET', 'POST'])
-def api_endpoint():
-    return {"message": "CORS enabled!"}
+@app.route("/bfhl", methods=["POST"])
 def process_data():
     try:
         data = request.json.get("data", [])
